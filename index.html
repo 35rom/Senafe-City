@@ -11,8 +11,8 @@
     <!-- Navigation Bar -->
     <header>
         <nav>
-            <ul>
-                <li><a href="#about">bzaeba</a></li>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -21,41 +21,63 @@
     </header>
 
     <!-- About Section -->
-    <section id="about">
-        <h1>About Me</h1>
-        <p>Hello, fuck u</p>
+    <section id="about" class="section">
+        <h1 class="section-title">About Me</h1>
+        <p>Hello, I am Esrom Grmay, a passionate web developer with a focus on creating modern, responsive, and user-friendly web experiences.</p>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h1>My Projects</h1>
-        <div class="project-card">
-            <h2>Project 1: Web App</h2>
-            <p>Description of the project...</p>
-            <a href="https://github.com/esromgrmay/project1" target="_blank">View on GitHub</a>
+    <section id="projects" class="section">
+        <h1 class="section-title">My Projects</h1>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h2>Project 1: Web App</h2>
+                <p>Description of the project...</p>
+                <a href="https://github.com/esromgrmay/project1" target="_blank" class="project-link">View on GitHub</a>
+            </div>
+            <!-- Add more projects here -->
         </div>
-        <!-- Add more projects here -->
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h1>My Skills</h1>
-        <ul>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>React</li>
-            <!-- Add more skills -->
-        </ul>
+    <section id="skills" class="section">
+        <h1 class="section-title">My Skills</h1>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-icon">💻</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">🌐</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-icon">⚛️</span>
+                        <span>React</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more skill categories here -->
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h1>Contact Me</h1>
+    <section id="contact" class="section">
+        <h1 class="section-title">Contact Me</h1>
         <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <div class="form-group">
+                <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" class="form-input" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="form-button">Send Message</button>
         </form>
     </section>
 
