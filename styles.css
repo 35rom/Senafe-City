@@ -2,7 +2,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #89f7fe, #66a6ff); /* Modern gradient background */
+    background: linear-gradient(135deg, #8e44ad, #3498db), url('your-background-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -11,6 +13,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: #333;
+    background-blend-mode: overlay;
 }
 
 /* Define custom properties for colors and shadows */
@@ -19,6 +22,44 @@ body {
     --secondary-color: #333;
     --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     --transition: 0.3s ease;
+}
+
+/* ===== Portfolio Section ===== */
+.portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.portfolio-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-info {
+    color: #333;
+}
+
+.portfolio-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 /* ===== Skills Section ===== */
@@ -30,7 +71,9 @@ body {
 }
 
 .skill-category {
-    background: rgba(255, 255, 255, 0.9); /* Transparent white for contrast */
+    background: rgba(255, 255, 255, 0.9) url('your-image-path.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
@@ -54,7 +97,7 @@ body {
     align-items: center;
     gap: 0.75rem;
     padding: 1rem;
-    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Gradient for skill items */
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
     border-radius: 0.5rem;
     transition: var(--transition);
 }
@@ -73,7 +116,7 @@ body {
 #contact-form {
     max-width: 600px;
     margin: 2rem auto;
-    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
@@ -99,7 +142,8 @@ body {
 .form-button {
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(135deg, #667eea, #764ba2); /* Gradient for button */
+    background: url('your-button-image.jpg') no-repeat center center; /* Replace with your image path */
+    background-size: cover;
     color: white;
     border: none;
     border-radius: 0.5rem;
@@ -115,12 +159,26 @@ body {
 
 /* ===== Footer ===== */
 footer {
-    background: linear-gradient(135deg, #373b44, #4286f4); /* Gradient for footer */
+    background: linear-gradient(135deg, #373b44, #4286f4);
     color: white;
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
     width: 100%;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-image: url('your-footer-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    border-radius: 50%;
 }
 
 /* ===== Responsive Design ===== */
